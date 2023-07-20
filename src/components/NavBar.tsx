@@ -1,13 +1,12 @@
-import { HStack, Image, Text } from "@chakra-ui/react";
+import { HStack, Image } from "@chakra-ui/react";
 import logo from "../assets/logo.svg";
+import ColorModeSwith from "./ColorModeSwitch";
 
 export default function NavBar() {
 	return (
-		<HStack>
+		<HStack justify={"space-between"} padding={"10px 30px"}>
 			<Image src={logo} boxSize={"60px"} />
-			<Text fontSize={"xl"} color={"#E9EAEC"} fontWeight={"900"}>
-				GameHunter
-			</Text>
+			<ColorModeSwith />
 		</HStack>
 	);
 }
