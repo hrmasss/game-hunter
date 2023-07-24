@@ -31,7 +31,7 @@ function App() {
 				</GridItem>
 			</Show>
 			<GridItem area="main" paddingX={5}>
-				<GamesGrid />
+				<GamesGrid genre={selectedGenre} />
 			</GridItem>
 		</Grid>
 	);
