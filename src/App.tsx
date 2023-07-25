@@ -42,6 +42,7 @@ function App() {
 				</GridItem>
 			</Show>
 			<GridItem area="main" paddingX={5}>
+				{/* TODO: This causes problems in responsive layout, need to implement vertical layout on smaller devices */}
 				<HStack marginBottom={5} spacing={5}>
 					<PlatformSelectionMenu
 						onSelectPlatform={(platform) =>
