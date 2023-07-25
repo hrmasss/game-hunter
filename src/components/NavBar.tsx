@@ -1,5 +1,5 @@
 import { HStack, Image } from "@chakra-ui/react";
-import icon from "../../public/icon.svg";
+import icon from "../assets/icon.svg";
 import ColorModeSwith from "./ColorModeSwitch";
 
 export default function NavBar() {

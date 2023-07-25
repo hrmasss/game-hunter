@@ -5,7 +5,7 @@ import GenreList from "./components/GenreList";
 import { useState } from "react";
 import { Genre } from "./hooks/useGenres";
 import PlatformSelectionMenu from "./components/PlatformSelectionMenu";
-import { Platform } from "./hooks/useGames";
+import { Platform } from "./hooks/usePlatforms";
 
 function App() {
 	const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
