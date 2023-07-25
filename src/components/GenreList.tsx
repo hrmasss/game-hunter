@@ -13,9 +13,10 @@ import getCroppedImageUrl from "../services/image-url";
 
 interface Props {
 	onSelectGenre: (genre: Genre) => void;
+	selectedGenre: Genre | null;
 }
 
-export default function GenreList({ onSelectGenre }: Props) {
+export default function GenreList({ onSelectGenre, selectedGenre }: Props) {
 	const { genres, error, isLoading } = useGenres();
 	const genreSkeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 	return (
@@ -39,7 +40,11 @@ export default function GenreList({ onSelectGenre }: Props) {
 								objectFit="cover"
 								borderRadius={4}
 							/>
-							<Text fontSize="lg" isTruncated>
+							<Text
+								fontSize="lg"
+								isTruncated
+								fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
+							>
 								{genre.name}
 							</Text>
 						</HStack>
