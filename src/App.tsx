@@ -7,6 +7,7 @@ import { Genre } from "./hooks/useGenres";
 import PlatformSelectionMenu from "./components/PlatformSelectionMenu";
 import { Platform } from "./hooks/usePlatforms";
 import SortingSelectionMenu from "./components/SortingSelectionMenu";
+import GamesHeading from "./components/GamesHeading";
 
 export interface GameQuery {
 	genre: Genre | null;
@@ -43,8 +44,10 @@ function App() {
 				</GridItem>
 			</Show>
 			<GridItem area="main" paddingX={5}>
+				<GamesHeading gameQuery={gameQuery} />
+
 				{/* TODO: This causes problems in responsive layout, need to implement vertical layout on smaller devices */}
-				<HStack marginBottom={5} spacing={5}>
+				<HStack marginY={5} spacing={5}>
 					<PlatformSelectionMenu
 						onSelectPlatform={(platform) =>
 							setGameQuery({ ...gameQuery, platform })
