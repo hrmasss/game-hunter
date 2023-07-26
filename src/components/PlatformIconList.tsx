@@ -7,8 +7,8 @@ import {
 	FaLinux,
 	FaApple,
 } from "react-icons/fa";
-import { MdPhoneIphone } from "react-icons/md";
 import { BsGlobe, BsNintendoSwitch } from "react-icons/bs";
+import { IoLogoAppleAppstore } from "react-icons/io5";
 import { IconType } from "react-icons";
 import { Platform } from "../hooks/usePlatforms";
 
@@ -23,7 +23,7 @@ const iconMap: { [key: string]: IconType } = {
 	android: FaAndroid,
 	linux: FaLinux,
 	mac: FaApple,
-	iphone: MdPhoneIphone,
+	ios: IoLogoAppleAppstore,
 	web: BsGlobe,
 	nintendo: BsNintendoSwitch,
 };

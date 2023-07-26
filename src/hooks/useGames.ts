@@ -18,6 +18,7 @@ export default function useGames(query: GameQuery) {
 				genres: query.genre?.id,
 				parent_platforms: query.platform?.id,
 				ordering: query.order,
+				search: query.search,
 			},
 		},
 		[query]
