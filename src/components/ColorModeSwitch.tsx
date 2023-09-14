@@ -1,13 +1,19 @@
-import { HStack, Switch, Text, useColorMode } from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/react";
+import styles from "./ColorModeSwitch.module.css";
 
 export default function ColorModeSwith() {
-	const { colorMode, toggleColorMode } = useColorMode();
+    const { colorMode, toggleColorMode } = useColorMode();
 
-	return (
-		<HStack>
-			<Text>Light</Text>
-			<Switch colorScheme="green" isChecked={colorMode === "dark"} onChange={toggleColorMode} />
-			<Text>Dark</Text>
-		</HStack>
-	);
+    return (
+        <div className={styles.checkboxWrapper}>
+            <label className={styles.switch}>
+                <input
+                    type="checkbox"
+                    checked={colorMode === "dark"}
+                    onChange={toggleColorMode}
+                />
+                <span className={styles.slider}></span>
+            </label>
+        </div>
+    );
 }
